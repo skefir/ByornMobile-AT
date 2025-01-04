@@ -1,4 +1,4 @@
-package org.skefir.common
+package common
 
 
 import org.apache.commons.configuration2.Configuration

@@ -2,12 +2,12 @@ package test
 
 import com.codeborne.selenide.Configuration
 import com.codeborne.selenide.Selenide
+import common.DataConstants
+import common.DataConstants.CURRENT_PLATFORM
+import common.PLATFORM
+import config.AndroidDriverProvider
+import config.IOSDriverProvider
 import org.junit.jupiter.api.BeforeEach
-import org.skefir.common.DataConstants
-import org.skefir.common.DataConstants.CURRENT_PLATFORM
-import org.skefir.common.PLATFORM
-import org.skefir.conf.AndroidDriverProvider
-import org.skefir.conf.IOSDriverProvider
 import step.AndroidStepFactory
 import step.IOSStepFactory
 import step.StepFactory
