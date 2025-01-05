@@ -18,7 +18,7 @@ open class BaseTest {
         when (CURRENT_PLATFORM) {
             PLATFORM.ANDROID.name -> AndroidStepFactory()
             PLATFORM.IOS.name -> IOSStepFactory()
-            else -> throw IllegalStateException("Not supported platform ${DataConstants.CONFIG.getString("platform")}")
+            else -> error("Not supported platform ${DataConstants.CONFIG.getString("platform")}")
         }
     }
 
@@ -30,7 +30,7 @@ open class BaseTest {
         Configuration.browser = when (CURRENT_PLATFORM) {
             PLATFORM.ANDROID.name -> AndroidDriverProvider::class.java.name
             PLATFORM.IOS.name -> IOSDriverProvider::class.java.name
-            else -> throw IllegalStateException("Not supported platform ${DataConstants.CONFIG.getString("platform")}")
+            else -> error("Not supported platform ${DataConstants.CONFIG.getString("platform")}")
         }
         Selenide.open()
     }

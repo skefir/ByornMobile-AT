@@ -12,7 +12,9 @@ class MainPage {
     }
 
     val taskElementSelector by lazy {
-        CombinedBy.android(AppiumBy.xpath(".//android.view.View[@content-desc and .//android.view.View[@content-desc]]"))
+        CombinedBy.android(
+            AppiumBy.xpath(".//android.view.View[@content-desc and .//android.view.View[@content-desc]]")
+        )
             .ios(AppiumBy.accessibilityId("taskElement"))
     }
 
@@ -28,5 +30,4 @@ class MainPage {
 
 
     fun taskElements(): ElementsCollection = `$`(taskSectionSelector).`$$`(taskElementSelector)
-
 }

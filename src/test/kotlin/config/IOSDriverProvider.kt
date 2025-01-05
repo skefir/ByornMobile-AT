@@ -32,5 +32,4 @@ object IOSDriverProvider : WebDriverProvider {
         options.setCapability("autoAcceptAlerts", true)
         return IOSDriver(URI(APPIUM_URL).toURL(), options)
     }
-
 }

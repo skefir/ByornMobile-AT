@@ -10,12 +10,12 @@ import org.apache.commons.configuration2.builder.fluent.Parameters
 
 object DataConstants {
     val CONFIG: Configuration by lazy {
-            FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration::class.java)
-                .configure(
-                    Parameters().properties()
-                        .setFileName(System.getProperty("autotest.config.file", "autotest.properties"))
-                ).configuration
-       }
+        FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration::class.java)
+            .configure(
+                Parameters().properties()
+                    .setFileName(System.getProperty("autotest.config.file", "autotest.properties"))
+            ).configuration
+    }
     val CURRENT_PLATFORM = CONFIG.getString("platform")
     val APPIUM_URL = CONFIG.getString("appium.url", "http://127.0.0.1:4723/wd/hub")
     val IOS_INSTALL_PATH = CONFIG.getString("ios.install.path", "./app/app-release.app")

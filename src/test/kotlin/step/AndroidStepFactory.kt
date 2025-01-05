@@ -1,4 +1,3 @@
 package step
 
-class AndroidStepFactory: StepFactory() {
-}
+class AndroidStepFactory : StepFactory()

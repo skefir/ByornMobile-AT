@@ -1,4 +1,3 @@
 package step
 
-class IOSStepFactory: StepFactory() {
-}
+class IOSStepFactory : StepFactory()
