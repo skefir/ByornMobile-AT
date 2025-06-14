@@ -19,7 +19,7 @@ object DataConstants {
     val CURRENT_PLATFORM = CONFIG.getString("platform")
     val APPIUM_URL = CONFIG.getString("appium.url", "http://127.0.0.1:4723/wd/hub")
     val IOS_INSTALL_PATH = CONFIG.getString("ios.install.path", "./app/app-release.app")
-    val ANDROID_INSTALL_PATH = CONFIG.getString("android.install.path", "./app/app-release.apk")
+    val ANDROID_INSTALL_PATH = CONFIG.getString("android.install.path", "app/app-releasei.apk")
     val IOS_PLATFORM_VERSION = CONFIG.getString("ios.platform.version", "18.1")
     val IOS_DEVICE_NAME = CONFIG.getString("ios.device.name", "iPhone 16 Pro")
 }
