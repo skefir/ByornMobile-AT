@@ -1,0 +1,21 @@
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+{
+  "platformName": "Android",
+  "appium:deviceName": "device name",
+  "appium:automationName": "UiAutomator2",
+  "appium:app": "/Users/ruaaccn/Developer/mobileat/ByornMobile-AT/src/test/resources/app/alkaa-3.3.0-debug.apk"
+}
+
+{
+  "platformName": "iOS",
+  "platfotmVersion": "18.5",
+  "appium:deviceName": "iPhone 16 Pro",
+  "appium:automationName": "XCUITest",
+  "appium:app": "/Users/ruaaccn/Developer/mobileat/ByornMobile-AT/src/test/resources/app/alkaa.app"
+}
+
+/Users/ruaaccn/Library/Android/sdk/build-tools/35.0.0/aapt dump badging ./alkaa-3.3.0-debug.apk > alkaa_dump
+
+appium server -p 4723 -a 127.0.0.1 -pa /wd/hub

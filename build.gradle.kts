@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation("com.codeborne:selenide-appium:7.5.1")
+    testImplementation("com.codeborne:selenide-appium:7.9.3")
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.3")
     testImplementation("commons-io:commons-io:2.17.0")
     testImplementation("org.apache.commons:commons-configuration2:2.11.0")

@@ -11,10 +11,10 @@ import org.openqa.selenium.Capabilities
 import org.openqa.selenium.WebDriver
 import java.io.File
 import java.net.URI
-import javax.annotation.ParametersAreNonnullByDefault
 
 
-@ParametersAreNonnullByDefault
+
+
 object AndroidDriverProvider : WebDriverProvider {
 
     override fun createDriver(capabilities: Capabilities): WebDriver {

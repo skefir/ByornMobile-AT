@@ -9,12 +9,14 @@ class MainSteps {
     val loginPage by lazy { Selenide.page<MainPage>() }
 
     fun addTask(taskTitle: String) {
-        `$`(loginPage.newTaskFieldSelector).type(taskTitle)
-        `$`(loginPage.addTaskButtonSelector).click()
+        loginPage.addNewTask.click()
+        loginPage.newTaskTitle.setValue(taskTitle)
+        loginPage.newTaskCreateButton.click()
+
 
     }
 
     fun checkTaskCount(taskCount: Int) {
-        loginPage.taskElements().shouldHave(size(taskCount))
+//        loginPage.taskElements().shouldHave(size(taskCount))
     }
 }

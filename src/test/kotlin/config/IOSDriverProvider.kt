@@ -10,16 +10,11 @@ import io.appium.java_client.ios.options.XCUITestOptions
 import org.openqa.selenium.Capabilities
 import org.openqa.selenium.WebDriver
 import java.net.URI
-import javax.annotation.CheckReturnValue
-import javax.annotation.Nonnull
-import javax.annotation.ParametersAreNonnullByDefault
 
 
-@ParametersAreNonnullByDefault
+
 object IOSDriverProvider : WebDriverProvider {
 
-    @CheckReturnValue
-    @Nonnull
     override fun createDriver(capabilities: Capabilities): WebDriver {
         val options = XCUITestOptions()
         options.merge(capabilities)
