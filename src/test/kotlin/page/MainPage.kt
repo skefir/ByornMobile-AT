@@ -1,14 +1,11 @@
 package page
 
-import com.codeborne.selenide.ElementsCollection
-import com.codeborne.selenide.Selenide
 import com.codeborne.selenide.SelenideElement
-import com.codeborne.selenide.appium.SelenideAppium.`$`
 import com.codeborne.selenide.appium.selector.CombinedBy
-import io.appium.java_client.AppiumBy
 import io.appium.java_client.pagefactory.AndroidFindBy
 import io.appium.java_client.pagefactory.iOSBy
-import java.awt.Button
+import org.openqa.selenium.By
+
 
 class MainPage {
 
@@ -24,6 +21,9 @@ class MainPage {
     @AndroidFindBy(xpath = "//android.view.View[./*[@text='Add']]/android.widget.Button")
     lateinit var newTaskCreateButton: SelenideElement
 
+    val task: By = CombinedBy
+        .android(By.xpath("//android.view.View[./android.widget.RadioButton and ./android.widget.TextView]"))
+        .ios(By.xpath("//XCUIElementTypeButton[@name='Login']"))
 
 
 }

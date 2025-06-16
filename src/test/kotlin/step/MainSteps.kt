@@ -2,7 +2,7 @@ package step
 
 import com.codeborne.selenide.CollectionCondition.size
 import com.codeborne.selenide.Selenide
-import com.codeborne.selenide.appium.SelenideAppium.`$`
+import com.codeborne.selenide.appium.SelenideAppium.`$$`
 import page.MainPage
 
 class MainSteps {
@@ -17,6 +17,6 @@ class MainSteps {
     }
 
     fun checkTaskCount(taskCount: Int) {
-//        loginPage.taskElements().shouldHave(size(taskCount))
+        `$$`(loginPage.task).shouldHave(size(taskCount))
     }
 }
